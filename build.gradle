@@ -1,0 +1,35 @@
+import org.paralleltask.ParallelExecutionTask
+import org.paralleltask.IntegerExecution
+import org.paralleltask.LetterExecution
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+/*
+task parallelExecution(type: ParallelExecutionTask) {
+    group = 'Custom Tasks' // Optional: Assign the task to a custom group
+    description = 'Execute custom tasks in parallel'
+} */
+
+task integerPrint(type : IntegerExecution){
+    timeToWait = 100
+}
+
+task letterPrint(type: LetterExecution){
+    timeToWait = 50
+}
+
+task testing() {
+    description 'Demonstrates intra-project parallelism by running the two sleep tasks'
+}
+tasks.withType(IntegerExecution) { task ->
+    tasks.testing.dependsOn task
+}
+
+tasks.withType(LetterExecution) { task ->
+    tasks.testing.dependsOn task
+}

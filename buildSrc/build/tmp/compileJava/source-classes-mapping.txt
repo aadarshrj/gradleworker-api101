@@ -1,0 +1,18 @@
+org/utilityclass/Printer.java
+ org.utilityclass.Printer
+org/paralleltask/LetterExecution.java
+ org.paralleltask.LetterExecution
+org/utilityclass/PrinterWorker.java
+ org.utilityclass.PrinterWorker
+org/utilityclass/Printable.java
+ org.utilityclass.Printable
+org/utilityclass/PrinterImplementation.java
+ org.utilityclass.PrinterImplementation
+org/paralleltask/ParallelExecutionTask.java
+ org.paralleltask.ParallelExecutionTask
+org/utilityclass/Letter.java
+ org.utilityclass.Letter
+org/utilityclass/IntegerTask.java
+ org.utilityclass.IntegerTask
+org/paralleltask/IntegerExecution.java
+ org.paralleltask.IntegerExecution
